@@ -10,7 +10,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ILMerge", "ILMerge", "{2C5DE3BA-64E3-4888-9E53-968CA797A8E9}"
 	ProjectSection(SolutionItems) = preProject
 		ILMerge\merge_all.bat = ILMerge\merge_all.bat
-		README = README
+		README.md = README.md
 	EndProjectSection
 EndProject
 Global
