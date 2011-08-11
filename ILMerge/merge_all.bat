@@ -5,7 +5,18 @@ set net="v4, C:\Windows\Microsoft.NET\Framework\v4.0.30319"
 set output=Output
 
 rem #    process arguments
-set ILMerge=%1ILMerge\ILMerge.exe
+set ILMergeSolution=%1ILMerge\ILMerge.exe
+
+
+rem # determine programm files of x86 for 32 and 64 Platform
+IF     EXIST "%PROGRAMFILES(x86)%" set prorgammFiles=%PROGRAMFILES(x86)%
+IF NOT EXIST "%PROGRAMFILES(x86)%" set prorgammFiles=%PROGRAMFILES%
+
+rem #	if ILMerge.exe not in the $(SolutionDir)ILMerge\
+rem #		then try to use installed in prorgammFiles
+IF     EXIST %ILMergeSolution% set ILMerge="%ILMergeSolution%"
+IF NOT EXIST %ILMergeSolution% set ILMerge=%prorgammFiles%\Microsoft\ILMerge\ILMerge.exe
+
 set target_path=%2
 set target_file=%~nx2
 set target_dir=%~dp2
@@ -26,8 +37,8 @@ IF EXIST "%outdir%" rmdir /S /Q "%outdir%"
 md "%outdir%"
 
 rem #    run merge cmd
-@echo Merging: '%ILMerge% /wildcards /targetplatform:%net% /out:"%result%" %target_path% "%target_dir%*.dll"'
-%ILMerge% /wildcards /targetplatform:%net% /out:"%result%" %target_path% "%target_dir%*.dll"
+@echo Merging: '"%ILMerge%" /wildcards /targetplatform:%net% /out:"%result%" %target_path% "%target_dir%*.dll"'
+"%ILMerge%" /wildcards /targetplatform:%net% /out:"%result%" %target_path% "%target_dir%*.dll"
 
 rem #    if succeded
 IF %ErrorLevel% EQU 0 (
@@ -48,8 +59,12 @@ IF %ErrorLevel% EQU 0 (
     ) ELSE (
        @echo Result: %target_file% "->  %result%" )
    
-   set status=succeded 
+   set status=succeded
+   set errlvl=0    
 ) ELSE (
-    set status=failed )
+    set status=failed 
+    set errlvl=1
+    )
 
-@echo Merge %status% 
+@echo Merge %status%
+exit %errlvl% 

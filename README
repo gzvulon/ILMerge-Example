@@ -1,0 +1,11 @@
+
+ILMerge.exe in build toolchain VS2010 Solution
+==============================================
+
+This Solution Demonstrate usage of ILMerge.exe in build toolchain.
+
+File ILMerge.exe cannot be distributed due to its license,
+But you can install it from here: 
+http://www.microsoft.com/download/en/details.aspx?displaylang=en&id=17630
+and then add it to solution (if you need it in source controll)
+or use it as is - bat file can use one installed in the program files.
