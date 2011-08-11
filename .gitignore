@@ -1,5 +1,8 @@
 _ReSharper.ILMerge-Example
 ILMerge-Example.*.ReSharper.user
-App\bin
-dep1\bin
-dep2\bin
+App\bin\
+dep1\bin\
+dep2\bin\
+App\obj\
+dep1\obj\
+dep2\obj\
