@@ -13,3 +13,8 @@ C:\Users\inesmeya\Documents\Visual Studio 2010\Projects\ILMerge-Example\dep1\bin
 C:\Users\inesmeya\Documents\Visual Studio 2010\Projects\ILMerge-Example\dep1\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\inesmeya\Documents\Visual Studio 2010\Projects\ILMerge-Example\dep1\obj\Debug\dep1.dll
 C:\Users\inesmeya\Documents\Visual Studio 2010\Projects\ILMerge-Example\dep1\obj\Debug\dep1.pdb
+C:\Users\inesmeya\Desktop\g\ILMerge-Example\dep1\bin\Debug\dep1.dll
+C:\Users\inesmeya\Desktop\g\ILMerge-Example\dep1\bin\Debug\dep1.pdb
+C:\Users\inesmeya\Desktop\g\ILMerge-Example\dep1\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\inesmeya\Desktop\g\ILMerge-Example\dep1\obj\Debug\dep1.dll
+C:\Users\inesmeya\Desktop\g\ILMerge-Example\dep1\obj\Debug\dep1.pdb
